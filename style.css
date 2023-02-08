@@ -30,6 +30,7 @@ body {
 header {
     letter-spacing: 2px;
     width: 23%;
+    min-width: 250px;
     text-align: center;
     position: relative;
     margin: auto;
@@ -43,16 +44,17 @@ header {
 }
 
 h3 {
+    font-size: 1.2em;
     position: absolute;
     top: -25%;
     left: -5%;
     letter-spacing: -1px;
     transform: rotate(350deg);
-    text-shadow: 3px 2px 0px rgba(255,255,255,1);
+    text-shadow: 2px 2px 0px rgba(255,255,255,1);
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2em;
     color: #000;
 }
 
@@ -60,7 +62,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.3);
     height: 80%;
     width: 60%;
     margin: auto;
@@ -74,8 +75,8 @@ h1 {
 .pokedex-left,
 .pokedex-right {
     position: relative;
-    border: 10px solid #000;
-    background-color: #e20000;
+    border: 8px solid #000;
+    background-color: #ee1111;
     aspect-ratio: 4/5;
     height: 75%;
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px, 6px 6px 0px 0px;
@@ -141,4 +142,22 @@ h1 {
 .design3 {
     background-color: #649c6c;
     margin-left: 38.5%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .screen {
+        background: #000 url(resources/bg.jpg) center center/cover fixed;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    .pokedex-left,
+    .pokedex-right {
+    position: relative;
+    aspect-ratio: 4/5;
+    height: 50%;
+    }
 }
