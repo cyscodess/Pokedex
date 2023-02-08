@@ -83,6 +83,7 @@ h1 {
 }
 
 .pokedex-left {
+    position: relative;
     border-right: 5px solid #000;
 }
 
@@ -142,6 +143,49 @@ h1 {
 .design3 {
     background-color: #649c6c;
     margin-left: 38.5%;
+}
+
+.contents {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+}
+
+input,
+button {
+    display: block;
+    text-align: center;
+    width: 50%;
+    min-width: 200px;
+    margin: 0.5rem auto;
+    padding: 0.6em 0.8em;
+    border: 3px solid #000;
+    background-color: #4cb050;
+}
+
+input::placeholder {
+    color: #3b3b3b;
+}
+
+.contents button {
+    text-transform: uppercase;
+    font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    touch-action: manipulation;
+    position: relative;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px;
+}
+
+.contents button:hover {
+    text-transform: uppercase;
+    font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+}
+
+.contents button:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
 }
 
 @media only screen and (max-width: 1024px) {
