@@ -244,8 +244,15 @@ input:focus::placeholder {
     padding-top: 2.5em;
 }
 
+
+.pkmn-name,
+.pkmn-stats,
+.pkmn-hw {
+    width: 70%;
+    margin: 1.2rem auto;
+}
+
 .pkmn-name {
-    margin: 1.5rem auto;
     border: 5px solid #000;
     background-color: #172331;
     aspect-ratio: 2/0.5;
@@ -254,11 +261,6 @@ input:focus::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.pkmn-name,
-.pkmn-stats {
-    width: 70%;
 }
 
 .pkmn-name > h2 {
@@ -275,13 +277,25 @@ input:focus::placeholder {
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
-    margin: auto;
 }
 
 .pkmn-stats > div {
     width: 100%;
-    height: 100%;
     background-color: #0aa0fc;
+    border: 3px solid #000;
+    text-align: center;
+    padding: 0.4em;
+}
+
+.pkmn-hw {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.pkmn-hw > div {
+    width: 40%;
+    background-color: #fefffd;
     border: 3px solid #000;
     text-align: center;
     padding: 0.4em;
