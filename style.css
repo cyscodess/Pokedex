@@ -24,7 +24,7 @@ body {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -60,16 +60,15 @@ h1 {
 
 .container {
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: center;
     height: 80%;
     width: 60%;
     margin: auto;
     position: absolute;
-    top: -10;
-    bottom: 0;
     left: 0;
     right: 0;
+    bottom: 15%;
 }
 
 .pokedex-left,
@@ -85,12 +84,6 @@ h1 {
     height: 75%;
     aspect-ratio: 4/5;
     border-right: 5px solid #000;
-}
-
-.pokedex-right {
-    height: 60%;
-    aspect-ratio: 4.5/5;
-    border-left: 5px solid #000;
 }
 
 .pokedex-left::before {
@@ -163,10 +156,35 @@ h1 {
 
 .left-screen {
     width: 65%;
-    aspect-ratio: 3/2;
+    aspect-ratio: 3/2.1;
     background-color: #fefffd;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 2.3rem auto;
     border: 5px solid #000;
+    position: relative;
+}
+
+.left-screen::before {
+    content: "";
+    background-color: #df1523;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: 4%;
+    margin-left: 5%;
+    width: 5%;
+    aspect-ratio: 5/5;
+    position: absolute;
+    bottom: 6%;
+}
+
+.sprite-cntnr {
+    border: 5px solid #000;
+    width: 70%;
+    background-color: #172331;
+    aspect-ratio: 3/2;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+
 }
 
 input,
@@ -175,16 +193,26 @@ button {
     text-align: center;
     width: 50%;
     margin: 0.5rem auto;
-    padding: 0.6em 0.8em;
+    padding: 0.7em 0.8em 0.6em 0.8em;
     border: 3px solid #000;
-    background-color: #4cb050;
+}
+
+input {
+    background-color: #83ce86;
 }
 
 input::placeholder {
+    letter-spacing: -1px;
+    font-size: 0.9rem;
     color: #3b3b3b;
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
+
 .contents button {
+    background-color: #4cb050;
     text-transform: uppercase;
     font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
     cursor: pointer;
@@ -204,7 +232,60 @@ input::placeholder {
     left: 5px;
 }
 
+.contents button:hover,
+.contents button:active {
+    background-color: #409443;
+}
 
+.pokedex-right {
+    height: 60%;
+    aspect-ratio: 4.5/5;
+    border-left: 5px solid #000;
+    padding-top: 2.5em;
+}
+
+.pkmn-name {
+    margin: 1.5rem auto;
+    border: 5px solid #000;
+    background-color: #172331;
+    aspect-ratio: 2/0.5;
+    top: 15%;
+    left: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pkmn-name,
+.pkmn-stats {
+    width: 70%;
+}
+
+.pkmn-name > h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.pkmn-stats {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin: auto;
+}
+
+.pkmn-stats > div {
+    width: 100%;
+    height: 100%;
+    background-color: #0aa0fc;
+    border: 3px solid #000;
+    text-align: center;
+    padding: 0.4em;
+}
 
 /* @media only screen and (max-width: 1024px) {
     .screen {
