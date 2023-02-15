@@ -250,7 +250,12 @@ input:focus::placeholder {
     height: 60%;
     aspect-ratio: 4.5/5;
     border-left: 5px solid #000;
-    padding-top: 2.5em;
+}
+
+.pokedex-right > div {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
 }
 
 .pkmn-name,
