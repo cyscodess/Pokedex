@@ -369,6 +369,14 @@ header button:active {
     background-color: #d6d5d5;
 }
 
+.fa-solid {
+    font-size: 1.2rem;
+}
+
+.fa-volume-xmark {
+    color: #bf122f;
+}
+
 
 /* @media only screen and (max-width: 1024px) {
     .screen {
