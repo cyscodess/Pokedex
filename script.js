@@ -7,6 +7,7 @@ window.onload = () => {
 }
 
 document.getElementById("sound-btn").addEventListener("click", toggleBgm)
+document.getElementById("get-pkmn-btn").addEventListener("click", getEnteredPkmn)
 
 function toggleBgm() {
     bgm.muted = !bgm.muted
@@ -24,3 +25,6 @@ function toggleBgmIcon() {
     }
 }
 
+function getEnteredPkmn() {
+    return document.getElementById("text-val").value
+}
