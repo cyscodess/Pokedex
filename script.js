@@ -7,7 +7,7 @@ window.onload = () => {
 }
 
 document.getElementById("sound-btn").addEventListener("click", toggleBgm)
-document.getElementById("get-pkmn-btn").addEventListener("click", getEnteredPkmn)
+document.getElementById("get-pkmn-btn").addEventListener("click", renderPokemon)
 
 function toggleBgm() {
     bgm.muted = !bgm.muted
@@ -25,6 +25,10 @@ function toggleBgmIcon() {
     }
 }
 
+function renderPokemon() {
+    const enteredPokemon = document.getElementById("text-val").value
+}
+
 function getEnteredPkmn() {
-    return document.getElementById("text-val").value
+    
 }
