@@ -31,6 +31,7 @@ async function renderPokemon() {
     const enteredValue = document.getElementById("text-val").value
     const pokemon = await getEnteredPkmn(enteredValue)
     displayName(pokemon.name)
+    displayType(pokemon.types[0].type.name)
     document.getElementById("text-val").value = ""
 }
 
@@ -38,6 +39,7 @@ async function getEnteredPkmn(pokemon) {
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
     const response = await fetch(url)
     const json = await response.json()
+    console.log(json)
     return json
 }
 
@@ -46,8 +48,9 @@ function displayName(pokemon) {
     displayField.textContent = pokemon
 }
 
-function displayStats(pokemon) {
-    
+function displayType(pokemon) {
+    const typeField = document.getElementById("stat-type")
+    typeField.textContent = pokemon.toUpperCase()
 }
 
 function clickSound() {
