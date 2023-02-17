@@ -316,9 +316,10 @@ input:focus::placeholder {
     border: 3px solid #000;
     text-align: center;
     padding: 0.4em;
+    font-size: 0.8rem;
 }
 
-.stat-type {
+#stat-type {
     grid-area: 1/1/2/3;
 }
 
@@ -326,10 +327,11 @@ input:focus::placeholder {
     display: flex;
     gap: 5px;
     align-items: flex-start;
+    font-size: 0.8rem;
 }
 
 .pkmn-hw > div {
-    width: 40%;
+    width: 45%;
     background-color: #fefffd;
     border: 3px solid #000;
     text-align: center;
