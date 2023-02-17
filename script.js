@@ -26,20 +26,38 @@ function toggleBgmIcon() {
     }
 }
 
-function renderPokemon() {
-    const enteredPokemon = document.getElementById("text-val").value
-    getEnteredPkmn(enteredPokemon)
+async function renderPokemon() {
+    pcSound()
+    const enteredValue = document.getElementById("text-val").value
+    const pokemon = await getEnteredPkmn(enteredValue)
+    displayName(pokemon.name)
+    document.getElementById("text-val").value = ""
 }
 
 async function getEnteredPkmn(pokemon) {
-    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
     const response = await fetch(url)
-    const json = response.json()
+    const json = await response.json()
     return json
+}
+
+function displayName(pokemon) {
+    const displayField = document.getElementById("display-name")
+    displayField.textContent = pokemon
+}
+
+function displayStats(pokemon) {
+    
 }
 
 function clickSound() {
     const pressAB = document.getElementById("press-ab")
     pressAB.play()
     pressAB.volume = 0.05
+}
+
+function pcSound() {
+    const pc = document.getElementById("pc")
+    pc.play()
+    pc.volume = 0.05
 }
