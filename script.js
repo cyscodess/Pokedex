@@ -39,6 +39,7 @@ async function renderPokemon() {
     pcSound()
     const enteredValue = document.getElementById("text-val").value
     const pokemon = await getEnteredPkmn(enteredValue.toLowerCase())
+    document.getElementById("text-val").value = ""
     displayName(pokemon.name)
     displayType(pokemon.types[0].type.name)
     displayImage(pokemon.sprites.front_default)
@@ -48,7 +49,7 @@ async function renderPokemon() {
     displaySpAtk(pokemon.stats[3].base_stat)
     displayHeight(pokemon.height)
     displayWeight(pokemon.weight)
-    document.getElementById("text-val").value = ""
+    changeTypeBg(pokemon.types[0].type.name)
 }
 
 async function getEnteredPkmn(pokemon) {
@@ -108,6 +109,7 @@ async function renderArtwork() {
     const enteredValue = document.getElementById("display-name").textContent.toLowerCase()
     const pokemon = await getEnteredPkmn(enteredValue)
     imageField.src = pokemon.sprites.other["official-artwork"].front_default
+    imageField.style.width = "70%"
 }
 
 async function renderSprite() {
@@ -115,6 +117,29 @@ async function renderSprite() {
     const enteredValue = document.getElementById("display-name").textContent.toLowerCase()
     const pokemon = await getEnteredPkmn(enteredValue)
     imageField.src = pokemon.sprites.front_default
+    imageField.style.width = "100%"
+}
+
+function changeTypeBg(type) {
+    const typeBg = document.getElementById("stat-type")
+    if (type === "normal") typeBg.style.backgroundColor = "#b9bbad"
+    if (type === "fire") typeBg.style.backgroundColor = "#fa5542"
+    if (type === "water") typeBg.style.backgroundColor = "#58adff"
+    if (type === "grass") typeBg.style.backgroundColor = "#8dd653"
+    if (type === "poison") typeBg.style.backgroundColor = "#a95da1"
+    if (type === "electric") typeBg.style.backgroundColor = "#f8e63a"
+    if (type === "ice") typeBg.style.backgroundColor = "#98f1ff"
+    if (type === "fairy") typeBg.style.backgroundColor = "#feb1ff"
+    if (type === "bug") typeBg.style.backgroundColor = "#c3d122"
+    if (type === "dark") typeBg.style.backgroundColor = "#916759"
+    if (type === "dragon") typeBg.style.backgroundColor = "#8874f9"
+    if (type === "fighting") typeBg.style.backgroundColor = "#a65844"
+    if (type === "flying") typeBg.style.backgroundColor = "#7ba4fe"
+    if (type === "ghost") typeBg.style.backgroundColor = "#7a74d4"
+    if (type === "ground") typeBg.style.backgroundColor = "#eace50"
+    if (type === "psychic") typeBg.style.backgroundColor = "#fe6ab8"
+    if (type === "rock") typeBg.style.backgroundColor = "#cdba75"
+    if (type === "steel") typeBg.style.backgroundColor = "#c3c4d9"
 }
 
 function clickSound() {

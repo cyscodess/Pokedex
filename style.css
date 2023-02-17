@@ -207,9 +207,9 @@ h1 {
     padding: 1em;
 }
 
-.sprite-cntnr img {
-    width: 70%;
-    object-fit: fill;
+#pkmn-sprite {
+    margin: 1rem;
+    width: 100%;
 }
 
 input,
