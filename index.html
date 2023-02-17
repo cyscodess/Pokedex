@@ -19,6 +19,7 @@
     <audio src="resources/bgm.mp3" id="bgm" loop="loop" autoplay="autoplay"></audio>
     <audio src="resources/ab.wav" id="press-ab"></audio>
     <audio src="resources/pc-on.wav" id="pc"></audio>
+    <audio src="resources/save.wav" id="save-sfx"></audio>
     <main class="screen">
         <header>
             <h3>online</h3>
@@ -39,7 +40,7 @@
                             <img src="" alt="" id="pkmn-sprite">
                         </div>
                     </div>
-                    <input type="text" class="type" id="text-val" placeholder="Enter Pokemon Name or Number">
+                    <input type="text" class="type" id="text-val" placeholder="Pokemon Name">
                     <button class="get-pkmn" id="get-pkmn-btn">Get Data</button>
                 </div>
             </div>
@@ -60,8 +61,8 @@
                         <div id="stat-wt">Wt</div>
                     </div>
                     <div class="right-btns">
-                        <button class="show-artwork-btn">Artwork</button>
-                        <button class="show-sprite-btn">Sprite</button>
+                        <button id="show-artwork-btn">Artwork</button>
+                        <button id="show-sprite-btn">Sprite</button>
                     </div>
                 </div>
             </div>

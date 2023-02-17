@@ -1,4 +1,5 @@
 const bgm = document.getElementById("bgm")
+const imageField = document.getElementById("pkmn-sprite")
 
 window.onload = () => {
     bgm.play()
@@ -8,6 +9,8 @@ window.onload = () => {
 
 document.getElementById("sound-btn").addEventListener("click", toggleBgm)
 document.getElementById("get-pkmn-btn").addEventListener("click", renderPokemon)
+document.getElementById("show-artwork-btn").addEventListener("click", renderArtwork)
+document.getElementById("show-sprite-btn").addEventListener("click", renderSprite)
 
 function toggleBgm() {
     clickSound()
@@ -61,7 +64,6 @@ function displayType(pokemon) {
 }
 
 function displayImage(pokemon) {
-    const imageField = document.getElementById("pkmn-sprite")
     imageField.src = pokemon
 }
 
@@ -95,6 +97,20 @@ function displayWeight(pokemon) {
     wtField.textContent = `WT: ${pokemon}`
 }
 
+async function renderArtwork() {
+    imgSound()
+    const enteredValue = document.getElementById("display-name").textContent.toLowerCase()
+    const pokemon = await getEnteredPkmn(enteredValue)
+    imageField.src = pokemon.sprites.other["official-artwork"].front_default
+}
+
+async function renderSprite() {
+    imgSound()
+    const enteredValue = document.getElementById("display-name").textContent.toLowerCase()
+    const pokemon = await getEnteredPkmn(enteredValue)
+    imageField.src = pokemon.sprites.front_default
+}
+
 function clickSound() {
     const pressAB = document.getElementById("press-ab")
     pressAB.play()
@@ -105,4 +121,10 @@ function pcSound() {
     const pc = document.getElementById("pc")
     pc.play()
     pc.volume = 0.05
+}
+
+function imgSound() {
+    const save = document.getElementById("save-sfx")
+    save.play()
+    save.volume = 0.05
 }
