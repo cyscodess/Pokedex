@@ -200,7 +200,15 @@ h1 {
     position: absolute;
     top: 15%;
     left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 1em;
+}
 
+.sprite-cntnr img {
+    width: 100%;
 }
 
 input,

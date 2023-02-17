@@ -32,6 +32,9 @@ async function renderPokemon() {
     const pokemon = await getEnteredPkmn(enteredValue)
     displayName(pokemon.name)
     displayType(pokemon.types[0].type.name)
+    displayImage(pokemon.sprites.front_default)
+    displayHeight(pokemon.height)
+    displayWeight(pokemon.weight)
     document.getElementById("text-val").value = ""
 }
 
@@ -51,6 +54,21 @@ function displayName(pokemon) {
 function displayType(pokemon) {
     const typeField = document.getElementById("stat-type")
     typeField.textContent = pokemon.toUpperCase()
+}
+
+function displayImage(pokemon) {
+    const imageField = document.getElementById("pkmn-sprite")
+    imageField.src = pokemon
+}
+
+function displayHeight(pokemon) {
+    const htField = document.getElementById("stat-ht")
+    htField.textContent = pokemon
+}
+
+function displayWeight(pokemon) {
+    const wtField = document.getElementById("stat-wt")
+    wtField.textContent = pokemon
 }
 
 function clickSound() {
