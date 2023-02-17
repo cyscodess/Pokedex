@@ -1,12 +1,6 @@
 const bgm = document.getElementById("bgm")
 const imageField = document.getElementById("pkmn-sprite")
 
-window.onload = () => {
-    bgm.volume = 0.05
-    bgm.muted = false
-    bgm.play()
-}
-
 document.getElementById("sound-btn").addEventListener("click", toggleBgm)
 document.getElementById("get-pkmn-btn").addEventListener("click", renderPokemon)
 document.getElementById("show-artwork-btn").addEventListener("click", renderArtwork)
@@ -22,6 +16,13 @@ function toggleBgm() {
     clickSound()
     bgm.muted = !bgm.muted
     toggleBgmIcon()
+
+    if (!bgm.muted) {
+        bgm.volume = 0.05
+        bgm.muted = false
+        bgm.play()
+        toggleBgmIcon()
+    }
 }
 
 function toggleBgmIcon() {
