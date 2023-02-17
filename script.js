@@ -28,10 +28,14 @@ function toggleBgmIcon() {
 
 function renderPokemon() {
     const enteredPokemon = document.getElementById("text-val").value
+    getEnteredPkmn(enteredPokemon)
 }
 
-function getEnteredPkmn() {
-    
+async function getEnteredPkmn(pokemon) {
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`
+    const response = await fetch(url)
+    const json = response.json()
+    return json
 }
 
 function clickSound() {
