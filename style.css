@@ -279,7 +279,7 @@ input:focus::placeholder {
 .pkmn-hw,
 .right-btns  {
     width: 70%;
-    margin: 1.6rem auto;
+    margin: 1.2rem auto;
 }
 
 .pkmn-name {

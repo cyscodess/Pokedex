@@ -29,7 +29,7 @@ function toggleBgmIcon() {
 async function renderPokemon() {
     pcSound()
     const enteredValue = document.getElementById("text-val").value
-    const pokemon = await getEnteredPkmn(enteredValue)
+    const pokemon = await getEnteredPkmn(enteredValue.toLowerCase())
     displayName(pokemon.name)
     displayType(pokemon.types[0].type.name)
     displayImage(pokemon.sprites.front_default)
