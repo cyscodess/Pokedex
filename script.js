@@ -12,6 +12,12 @@ document.getElementById("get-pkmn-btn").addEventListener("click", renderPokemon)
 document.getElementById("show-artwork-btn").addEventListener("click", renderArtwork)
 document.getElementById("show-sprite-btn").addEventListener("click", renderSprite)
 
+document.getElementById("text-val").addEventListener("keydown", e => {
+    if (e.keyCode === 13) {
+        document.getElementById("get-pkmn-btn").click()
+    }
+})
+
 function toggleBgm() {
     clickSound()
     bgm.muted = !bgm.muted
