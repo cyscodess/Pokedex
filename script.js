@@ -2,9 +2,9 @@ const bgm = document.getElementById("bgm")
 const imageField = document.getElementById("pkmn-sprite")
 
 window.onload = () => {
-    bgm.play()
     bgm.volume = 0.05
     bgm.muted = false
+    bgm.play()
 }
 
 document.getElementById("sound-btn").addEventListener("click", toggleBgm)
