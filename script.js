@@ -10,6 +10,7 @@ document.getElementById("sound-btn").addEventListener("click", toggleBgm)
 document.getElementById("get-pkmn-btn").addEventListener("click", renderPokemon)
 
 function toggleBgm() {
+    clickSound()
     bgm.muted = !bgm.muted
     toggleBgmIcon()
 }
@@ -31,4 +32,10 @@ function renderPokemon() {
 
 function getEnteredPkmn() {
     
+}
+
+function clickSound() {
+    const pressAB = document.getElementById("press-ab")
+    pressAB.play()
+    pressAB.volume = 0.05
 }
