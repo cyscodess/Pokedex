@@ -58,6 +58,34 @@ h1 {
     color: #000;
 }
 
+
+header button {
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    box-shadow: 1px 1px 0px 0px #000, 2px 2px 0px 0px #000, 3px 3px 0px 0px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header button:hover,
+header button:active {
+    cursor: pointer;
+    background-color: #d6d5d5;
+}
+
+.fa-solid {
+    font-size: 1.2rem;
+}
+
+.fa-volume-xmark {
+    color: #bf122f;
+}
+
 .container {
     display: flex;
     align-items: flex-end;
@@ -366,34 +394,6 @@ input:focus::placeholder {
 .right-btns > button:active {
     background-color: #1d2c3d;
 }
-
-header button {
-    border-radius: 100%;
-    width: 2.5vw;
-    height: 2.5vw;
-    position: absolute;
-    top: 40%;
-    right: 5%;
-    box-shadow: 1px 1px 0px 0px #000, 2px 2px 0px 0px #000, 3px 3px 0px 0px #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header button:hover,
-header button:active {
-    cursor: pointer;
-    background-color: #d6d5d5;
-}
-
-.fa-solid {
-    font-size: 1.2rem;
-}
-
-.fa-volume-xmark {
-    color: #bf122f;
-}
-
 
 /* @media only screen and (max-width: 1024px) {
     .screen {
