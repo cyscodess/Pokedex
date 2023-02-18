@@ -116,7 +116,7 @@ h1 {
 
 .top-design {
     width: 100%;
-    height: 110px;
+    height: 20%;
     border-bottom: 5px solid #9c0e0e;
 }
 
@@ -148,15 +148,19 @@ h1 {
 }
 
 .contents {
-    height: auto;
+    height: 80%;
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.contents * {
+    margin-bottom: 1.2rem;
 }
 
 .left-screen {
@@ -166,7 +170,6 @@ h1 {
     background-color: #fefffd;
     border: 5px solid #000;
     position: relative;
-    margin-bottom: 1.4rem;
 }
 
 .left-screen::before {
@@ -217,7 +220,6 @@ button {
     display: block;
     text-align: center;
     width: 50%;
-    margin: 0.5rem auto;
     padding: 0.7em 0.8em 0.6em 0.8em;
     border: 3px solid #000;
 }
@@ -272,7 +274,6 @@ input:focus::placeholder {
 
 .pokedex-right > div {
     width: 100%;
-    height: auto;
 }
 
 .pkmn-name,
@@ -331,8 +332,8 @@ input:focus::placeholder {
     font-size: 0.8rem;
 }
 
-.pkmn-hw > div {
-    width: 45%;
+.pkmn-hw div {
+    width: 50%;
     background-color: #fefffd;
     border: 3px solid #000;
     text-align: center;
@@ -345,6 +346,7 @@ input:focus::placeholder {
 }
 
 .right-btns > button {
+    font-size: 70%;
     color: #fff;
     background-color: #172331;
     font-family: "Press Start 2P", Arial, Helvetica, sans-serif;

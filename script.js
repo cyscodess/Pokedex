@@ -77,32 +77,32 @@ function displayImage(pokemon) {
 
 function displayHp(pokemon) {
     const hpField = document.getElementById("stat-hp")
-    hpField.textContent = `HP: ${pokemon}`
+    hpField.textContent = `HP:${pokemon}`
 }
 
 function displayDef(pokemon) {
     const defField = document.getElementById("stat-def")
-    defField.textContent = `DEF: ${pokemon}`
+    defField.textContent = `DEF:${pokemon}`
 }
 
 function displayAtk(pokemon) {
     const atkField = document.getElementById("stat-atk")
-    atkField.textContent = `ATK: ${pokemon}`
+    atkField.textContent = `ATK:${pokemon}`
 }
 
 function displaySpAtk(pokemon) {
     const spAtkField = document.getElementById("stat-sp-atk")
-    spAtkField.textContent = `SP: ${pokemon}`
+    spAtkField.textContent = `SP:${pokemon}`
 }
 
 function displayHeight(pokemon) {
     const htField = document.getElementById("stat-ht")
-    htField.textContent = `HT: ${pokemon}`
+    htField.textContent = `HT:${pokemon}`
 }
 
 function displayWeight(pokemon) {
     const wtField = document.getElementById("stat-wt")
-    wtField.textContent = `WT: ${pokemon}`
+    wtField.textContent = `WT:${pokemon}`
 }
 
 async function renderArtwork() {
