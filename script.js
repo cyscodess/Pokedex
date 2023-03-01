@@ -144,19 +144,19 @@ function changeTypeBg(type) {
 }
 
 function clickSound() {
-    const pressAB = document.getElementById("press-ab")
+    const pressAB = new Audio("resources/ab.wav")
     pressAB.play()
     pressAB.volume = 0.05
 }
 
 function pcSound() {
-    const pc = document.getElementById("pc")
+    const pc = new Audio("resources/pc-on.wav")
     pc.play()
     pc.volume = 0.05
 }
 
 function imgSound() {
-    const save = document.getElementById("save-sfx")
+    const save = new Audio("resources/save.wav")
     save.play()
     save.volume = 0.05
 }
